@@ -25,20 +25,18 @@ const Header = () => {
   };
 
   return (
-    <h1 className="scroll-m-20 text-7xl md:text-8xl font-extrabold tracking-tight mt-5 text-left block" >
-      <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-          {letters.map((letter, i) => (
-            <motion.span
-              key={i}
-              custom={i}
-              variants={letterVariants}
-              initial="hidden"
-              animate="visible"
-            >
-              {letter}
-            </motion.span>
-          ))}
-      </span>
+    <h1 className="text-7xl text-nord-4 font-extrabold tracking-tight mt-5" >
+      {letters.map((letter, i) => (
+        <motion.span
+          key={i}
+          custom={i}
+          variants={letterVariants}
+          initial="hidden"
+          animate="visible"
+        >
+          {letter}
+        </motion.span>
+      ))}
     </h1>
   );
 };
